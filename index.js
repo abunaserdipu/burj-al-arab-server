@@ -8,6 +8,10 @@ const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster
 
 const port = 7000;
 
+app.get("/", (req, res) => {
+  res.send("hello from db it's working");
+});
+
 const app = express();
 app.use(cors());
 app.use(express.json());
